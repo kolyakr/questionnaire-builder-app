@@ -1,3 +1,5 @@
+import path from "path";
+
 export const ENV = {
   PORT: "PORT",
   NODE_ENV: "NODE_ENV",
@@ -5,6 +7,9 @@ export const ENV = {
   MONGO_PASSWORD: "MONGO_PASSWORD",
   MONGO_URL: "MONGO_URL",
   MONGO_DB: "MONGO_DB",
+  CLOUD_NAME: "CLOUD_NAME",
+  CLOUD_API_KEY: "CLOUD_API_KEY",
+  CLOUD_API_SECRET: "CLOUD_API_SECRET",
 };
 
 export const QUESTION_TYPE = {
@@ -15,3 +20,11 @@ export const QUESTION_TYPE = {
 };
 
 export const getQuizzesQueryParams = ["name", "amount", "completions"];
+
+export const TEMP_DIRECTION = path.join(process.cwd(), "src", "temp");
+export const IMAGES_DIRECTION = path.join(
+  process.cwd(),
+  "src",
+  "temp",
+  "images"
+);
