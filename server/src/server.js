@@ -4,6 +4,7 @@ import cors from "cors";
 import pino from "pino-http";
 import { rootRouter } from "./routes/index.js";
 import { errorHandler } from "./middlewares/errorHandler.js";
+import cookieParser from "cookie-parser";
 
 export const startServer = () => {
   const app = express();
@@ -27,6 +28,7 @@ export const startServer = () => {
       optionsSuccessStatus: 204,
     })
   );
+  app.use(cookieParser());
   app.use(express.json());
   app.use(
     pino({

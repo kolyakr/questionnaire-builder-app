@@ -6,3 +6,12 @@ export const ENV = {
   MONGO_URL: "MONGO_URL",
   MONGO_DB: "MONGO_DB",
 };
+
+export const QUESTION_TYPE = {
+  TEXT: "text",
+  SINGLE_CHOICE: "single choice",
+  MULTIPLE_CHOICE: "multiple choice",
+  IMAGE: "image",
+};
+
+export const getQuizzesQueryParams = ["name", "amount", "completions"];
